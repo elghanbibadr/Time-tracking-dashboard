@@ -1,4 +1,84 @@
 @import './partials/variabel';
 @import './partials/general';
+body{
+    padding: 1.5rem;
+}
 
+.card{
+    margin: 4rem auto;
+    max-width: 500px;
+    position: relative;
+    &__header{
+        position: absolute;
+        height: 5.5rem;
+        left: 0rem;
+         width: 100%;
+         top: -2rem;
+        z-index:-1;
+        svg{
+            position: absolute;
+            right: 1rem;
+        }
+    }
+    &__body{
+        background-color: $primary-color;
+        z-index: 999999;
+        padding:  2rem;
+        display: flex;
+        justify-content: space-between;
+        h4{
+            font-size:1.4rem;
+            font-weight: 500;
+        }
+        h1{
+            font-weight:300;
+            font-size: 2.8rem;
+        }
+    }
+    &__time{
+        p{
+            margin-top: 1.7rem;
+        }
+        svg{
+            position: relative;
+            left:8rem;
+            top:-1px;
+            cursor: pointer;
+        }
+    }
+    &__body,&__header{
+        border-radius: 13px;
+    }
+}
 
+// seperate cards
+.card--1{
+    .card__header{
+        background-color: $orange;
+    }
+}
+.card--2{
+    .card__header{
+        background-color: $cayan;
+    }
+}
+.card--3{
+    .card__header{
+        background-color: $desaturatedRed;
+    }
+}
+.card--4{
+    .card__header{
+        background-color: $green;
+    }
+}
+.card--5{
+    .card__header{
+        background-color: $darkBlue;
+    }
+}
+.card--6{
+    .card__header{
+        background-color: $desaturatedYellow;
+    }
+}

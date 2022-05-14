@@ -1,0 +1,20 @@
+$primary-color:#1d204b;
+$secondary-color:#5746ea;
+$body-color:#0d1323;
+$cayan:#56c2e6;
+$orange:#ff8b64;
+$green:#4bcf83;
+$darkBlue:#7235d1;
+$desaturatedYellow:#f1c75b;
+$desaturatedRed:#ff5e7d;
+$heading:#fbffff;
+$text:#bfc1f2;
+$desktop:900px;
+
+// =======>mixins
+
+@mixin desktop {
+    @media (min-width:$desktop){
+        @content;
+    }   
+}
