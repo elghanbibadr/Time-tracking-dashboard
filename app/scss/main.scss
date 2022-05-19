@@ -1,13 +1,68 @@
 @import './partials/variabel';
 @import './partials/general';
+@import './partials/grid';
 body{
     padding: 1.5rem;
+}
+
+.report{
+    @include desktop{
+        width: 90%;
+        margin-top: 1rem;
+        &__header,&__body{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 4rem;
+                height: auto;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    max-width: 500px;
+    margin-inline: auto;
+    &__header{
+        background-color:$secondary-color;
+        display: flex;
+         justify-content: space-evenly;
+        padding:3rem 1rem;
+        border-radius: 13px;
+        position: relative;
+        top: 1rem;
+        h2{
+            font-weight: 300;
+        }
+    }
+    &__img{
+        height: 5rem;
+        border: 4px solid white;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__body{
+        h4{
+            font-weight: 400 !important;
+            color: $text;
+            cursor: pointer;
+            transition: 0.4s color;
+            &:hover{
+                color: #f1f1f1;
+            }
+            @include desktop{
+                margin-bottom: 0.3rem;
+            }
+        }
+    }
 }
 
 .card{
     margin: 4rem auto;
     max-width: 500px;
     position: relative;
+    @include desktop{
+        width: 100%;
+    }
     &__header{
         position: absolute;
         height: 5.5rem;
@@ -30,10 +85,7 @@ body{
             font-size:1.4rem;
             font-weight: 500;
         }
-        h1{
-            font-weight:300;
-            font-size: 2.8rem;
-        }
+      
     }
     &__time{
         p{
@@ -68,6 +120,7 @@ body{
     }
 }
 .card--4{
+   
     .card__header{
         background-color: $green;
     }
@@ -81,4 +134,10 @@ body{
     .card__header{
         background-color: $desaturatedYellow;
     }
+}
+
+
+.report{
+    grid-row: span 2;
+    height: 100% !important;
 }

@@ -12,6 +12,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+h1 {
+  font-weight: 300;
+  font-size: 2.8rem;
+}
+
 h1, h2, h3, h4 {
   color: #fbffff;
 }
@@ -20,14 +25,106 @@ p {
   font-weight: 500;
 }
 
+@media (min-width: 1200px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    gap: 1rem;
+  }
+  .grid--cls4 {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (200px)[2];
+        grid-template-rows: repeat(2, 200px);
+  }
+}
+
 body {
   padding: 1.5rem;
+}
+
+.report {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+@media (min-width: 1200px) {
+  .report {
+    width: 90%;
+    margin-top: 1rem;
+  }
+  .report__header, .report__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .report__header img, .report__body img {
+    width: 4rem;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.report__header {
+  background-color: #5746ea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 3rem 1rem;
+  border-radius: 13px;
+  position: relative;
+  top: 1rem;
+}
+
+.report__header h2 {
+  font-weight: 300;
+}
+
+.report__img {
+  height: 5rem;
+  border: 4px solid white;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.report__body h4 {
+  font-weight: 400 !important;
+  color: #bfc1f2;
+  cursor: pointer;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+
+.report__body h4:hover {
+  color: #f1f1f1;
+}
+
+@media (min-width: 1200px) {
+  .report__body h4 {
+    margin-bottom: 0.3rem;
+  }
 }
 
 .card {
   margin: 4rem auto;
   max-width: 500px;
   position: relative;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: 100%;
+  }
 }
 
 .card__header {
@@ -59,11 +156,6 @@ body {
 .card__body h4 {
   font-size: 1.4rem;
   font-weight: 500;
-}
-
-.card__body h1 {
-  font-weight: 300;
-  font-size: 2.8rem;
 }
 
 .card__time p {
@@ -103,5 +195,10 @@ body {
 
 .card--6 .card__header {
   background-color: #f1c75b;
+}
+
+.report {
+  grid-row: span 2;
+  height: 100% !important;
 }
 /*# sourceMappingURL=main.css.map */

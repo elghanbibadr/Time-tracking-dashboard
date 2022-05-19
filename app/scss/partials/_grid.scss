@@ -1,0 +1,11 @@
+@include desktop{
+    .grid{
+        display: grid;
+        align-content: center;
+        gap: 1rem;
+    }
+    .grid--cls4{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,200px);
+    }
+}
